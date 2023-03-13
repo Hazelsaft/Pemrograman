@@ -622,3 +622,26 @@
     )
 )
 
+(defun sumeven(L)
+    (cond
+        (
+            (null L) 0)
+        (
+            (evenp (car L))
+            (+ (car L)(sumeven (cdr L))))
+        (
+            t(sumeven (cdr L)))
+        (
+            t(+ 0))
+    )
+)
+(defun fx2(L)
+    (* L L)
+)
+
+(defun sumofsquares(L)
+    (cond
+        ((null L) 0)
+        (t(+ (fx2 (car L))(sumofsquares (cdr L))))
+    )
+)
